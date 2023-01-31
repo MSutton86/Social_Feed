@@ -10,10 +10,13 @@ const CreatePost = props => {
     return ( 
         <form onSubmit={handlePost}>
             <div>
-                <label htmlFor="">Posts</label>
-                <input type="text" />
+                <label>Posts</label>
+                <input type="" 
+                    value={post}
+                    onChange={(event) =>setPost(event.target.value)}
+                />
             </div>
-            <button type='post'>POST</button>
+            <button type='submit'>POST</button>
         </form>
             );
     }
