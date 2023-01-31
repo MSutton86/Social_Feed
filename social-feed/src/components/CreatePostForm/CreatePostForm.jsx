@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
  
 const CreatePost = props => {
-    const [post, createPost] = useState('');
+    const [post, setPost] = useState('');
 
     const handlePost = event => {
-        createPost(event.target.value)
+        event.preventDefault();
+        setPost(event.target.value)
     }
     return ( 
-        <form action="">
+        <form onSubmit={handlePost}>
             <div>
+                <label htmlFor="">Posts</label>
                 <input type="text" />
             </div>
-            <button type='post'></button>
+            <button type='post'>POST</button>
         </form>
             );
     }
