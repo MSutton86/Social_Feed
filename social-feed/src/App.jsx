@@ -1,7 +1,7 @@
 import PostList from "./PostList/PostList";
 import React, { useState } from "react";
 import Post from "./components/Post/Post";
-import CreatePostForm from "./components/CreatePostForm"
+import CreatePostForm from "./components/CreatePostForm/CreatePostForm"
 
 function App() {
   const [posts, setPosts] = useState([
@@ -15,7 +15,7 @@ function App() {
 
   return (
     <div id="App">
-      <CreatePostForm post={createPostForm}/>
+      <CreatePostForm post={CreatePostForm}/>
       <PostList posts={posts} />
 
     </div>

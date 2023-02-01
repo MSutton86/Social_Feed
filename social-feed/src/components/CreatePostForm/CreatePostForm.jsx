@@ -33,4 +33,4 @@ const CreatePost = (props) => {
 
 <form action=""></form>;
 export default CreatePost;
-pro;
+
