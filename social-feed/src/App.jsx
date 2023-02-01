@@ -1,19 +1,23 @@
 import PostList from "./PostList/PostList";
 import React, { useState } from "react";
+import Post from "./components/Post/Post";
+import CreatePostForm from "./components/CreatePostForm"
 
 function App() {
   const [posts, setPosts] = useState([
-    { author: "Mark Sutton", body: "Hello World" },
-    { author: "Ned Flanders", body: "Diddly Doo "},
-  ]);
+    
+  function createPostForm(post){
+    let tempPosts = [Post,   post]
+    setPosts(tempPosts)
+}]);
 
 
 
   return (
-    <div className="App">
-      <CreatePostForm/>
+    <div id="App">
+      <CreatePostForm post={createPostForm}/>
       <PostList posts={posts} />
-    
+
     </div>
   );
 }
