@@ -6,7 +6,11 @@ const CreatePost = (props) => {
 
   const handlePost = (event) => {
     event.preventDefault();
-    setPost(event.target.value);
+    let newPost = {
+      "author": author,
+      "body": post,
+    }
+    props.createNewPost(newPost)
   };
   return (
     <form onSubmit={handlePost}>

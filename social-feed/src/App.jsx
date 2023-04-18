@@ -5,17 +5,21 @@ import CreatePostForm from "./components/CreatePostForm/CreatePostForm"
 
 function App() {
   const [posts, setPosts] = useState([
-    
-  function createPostForm(post){
-    let tempPosts = [Post,   post]
+    {
+      "author":""
+      "body":""
+    }
+  ]);
+  
+  function createNewPost(post){
+    let tempPosts = [...posts,   post]
     setPosts(tempPosts)
-}]);
 
 
 
   return (
     <div id="App">
-      <CreatePostForm post={CreatePostForm}/>
+      <CreatePostForm createNewPost={createNewPost}/>
       <PostList posts={posts} />
 
     </div>
